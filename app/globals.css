@@ -1,5 +1,12 @@
 @import "tailwindcss";
-
+@font-face {
+  font-family: Moga;
+  src: url("/moga.otf") format("opentype");
+}
+@font-face {
+  font-family: PT;
+  src: url("/PTSans-Bold.ttf") format("truetype");
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;
