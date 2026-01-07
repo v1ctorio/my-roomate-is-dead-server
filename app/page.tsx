@@ -6,6 +6,7 @@ export default function Home() {
 
   const DATA = ["Blue jacket", "Glasses"]
   const [doorState, setDoorState] = useState<boolean | null>(null)
+  const [isCodeCorrect, setIsCodeCorrect] = useState<boolean | null>(null)
 
   const handleDoorClick = async (isOpen: boolean) => {
     try {
@@ -48,7 +49,7 @@ export default function Home() {
 
       </main>
       
-
+        {!isCodeCorrect && 
 <form>   
     <label  className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
     <div className="relative">
@@ -59,7 +60,7 @@ export default function Home() {
         <button type="button" className="absolute end-1.5 bottom-1.5 text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded text-xs px-3 py-1.5 focus:outline-none">Search</button>
     </div>
 </form>
-
+}
 
     </div>
   );
